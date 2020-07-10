@@ -1,0 +1,11 @@
+.jumbotron {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  background-color: #EFD9CE;
+  color: #3A3238;
+}
+
+input:focus, button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
