@@ -1,11 +1,19 @@
 .jumbotron {
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  background-color: #EFD9CE;
-  color: #3A3238;
+  background-color: #c44536;
+  color: #edddd4;
 }
 
 input:focus, button:focus {
   outline: none !important;
   box-shadow: none !important;
+}
+
+
+p {
+  display: block;
+  margin-block-start: 0em !important;
+  margin-block-end: 0em !important;
+  margin-bottom: 0em !important;
 }

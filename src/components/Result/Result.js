@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 function Result(props) {
     return (     
         <div className="card mt-3 mb-3">
@@ -9,26 +10,23 @@ function Result(props) {
         </div>
 
         <div id="article-section" className="card-body">
+
         {props.result ? props.result.map((item) => { 
+
           return(
-            <li className='list-group-item' key={item.id}>
-            <h5>{item.name}</h5>
-            <p>Phone: {item.display_phone}</p>
-            <p>Location: {item.location.address1}, {item.location.city}, {item.location.state} {item.location.zip_code}</p>
-            <p>Link: <a href={item.url}>Store Link</a></p>
-            <img src={item.image_url} alt="store"/>
-            
-            
-            
-            </li>
-            
-            
+              <li className='list-group-item' key={item.id}>
+              <h5>{item.name}</h5>
+              <p>Phone: {item.display_phone}</p>
+              <p>Location: {item.location.address1}, {item.location.city}, {item.location.state} {item.location.zip_code}</p>
+              <p>Link: <a href={item.url}>View More on Yelp</a></p>
+              </li>  
             )
-          
+            
           }): <p>No stores available!</p>}
         </div>
+        </div>
 
-        </div>     
+     
     )
 }
 

@@ -14,7 +14,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.searchStore('coffee',40,73);
+    this.searchStore('coffee',40,-120);
   }
 
   searchStore = (term,latitude,longitude) => {
