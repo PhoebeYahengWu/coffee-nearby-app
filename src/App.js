@@ -12,12 +12,13 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.searchNews("China")
+    this.searchStore('coffee','40.7128','74.0060');
   }
 
-  searchNews = query => {
-    API.search(query)
-      .then(res => this.setState({ result: res.data.response.docs }))
+  searchStore = (query,latitude,longitude) => {
+    API.search(query,latitude,longitude)
+      .then(res => console.log(res))
+      .then(res => this.setState({ results: res.data }))
       .catch(err => console.log(err));
   };
 
