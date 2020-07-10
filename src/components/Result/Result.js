@@ -11,7 +11,16 @@ function Result(props) {
         <div id="article-section" className="card-body">
         {props.result ? props.result.map((item) => { 
           return(
-            <li class='list-group-item' key={item.id}>{item.name}</li>
+            <li className='list-group-item' key={item.id}>
+            <h5>{item.name}</h5>
+            <p>Phone: {item.display_phone}</p>
+            <p>Location: {item.location.address1}, {item.location.city}, {item.location.state} {item.location.zip_code}</p>
+            <p>Link: <a href={item.url}>Store Link</a></p>
+            <img src={item.image_url} alt="store"/>
+            
+            
+            
+            </li>
             
             
             )
