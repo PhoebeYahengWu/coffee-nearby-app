@@ -2,27 +2,29 @@ import React, { Component } from 'react';
 import Title from './components/Title/Title';
 import Search from './components/Search/Search';
 import Result from './components/Result/Result';
-import API from './utils/API';
+import API from './utils/API'
 import './App.css';
 
 class App extends Component {
   state = {
     result: [],
-    search: ""
+    term: "",
+    latitude: "",
+    longitude: ""
   };
 
   componentDidMount() {
-    this.searchStore('coffee','40.7128','74.0060');
+    this.searchStore('coffee',40,-120);
   }
 
-  searchStore = (query,latitude,longitude) => {
-    API.search(query,latitude,longitude)
+  searchStore = (term,latitude,longitude) => {
+    API.search(term,latitude,longitude)
       .then(res => console.log(res))
-      .then(res => this.setState({ results: res.data }))
+      // .then(res => this.setState({ results: res }))
       .catch(err => console.log(err));
   };
 
-
+  
   handleInputChange = event => {
     const value = event.target.value;
     const name = event.target.name;
@@ -33,7 +35,7 @@ class App extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchNews(this.state.search);
+    this.searchStore(this.state.search);
   }
 
   render() {

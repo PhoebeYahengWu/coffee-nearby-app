@@ -9,15 +9,29 @@ function Search(props) {
         </div>
 
         <div className="card-body">
-        <div className="form-group">
+        <div className="input-group mb-3">
      
           <input type="text" 
           onChange={props.handleInputChange}
           value={props.value}
-          name="search"
-          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Enter Another Word To Search" />
-        </div>
+          name="term"
+          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Term" />
+       
 
+        <input type="text" 
+          onChange={props.handleInputChange}
+          value={props.value}
+          name="latitude"
+          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Latitude" />
+       
+
+        <input type="text" 
+          onChange={props.handleInputChange}
+          value={props.value}
+          name="longitude"
+          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Longitude" />
+        
+        </div>
         <table style={{width:"100%"}}>
           <tbody>
            <tr>
@@ -26,6 +40,7 @@ function Search(props) {
           </tr>
          </tbody> 
         </table>
+       
       </div>
       </div>
 

@@ -4,7 +4,7 @@ function Result(props) {
     return (     
         <div className="card mt-3 mb-3">
         <div className="card-header" style={{backgroundColor: "#f8f9fa"}}>
-          <i className="far fa-newspaper"></i> Top Articles
+          <i className="far fa-newspaper"></i> Stores Nearby
         </div>
 
         <div id="article-section" className="card-body">
