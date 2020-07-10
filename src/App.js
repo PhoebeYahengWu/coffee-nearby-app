@@ -19,8 +19,7 @@ class App extends Component {
 
   searchStore = (term,latitude,longitude) => {
     API.search(term,latitude,longitude)
-      .then(res => console.log(res))
-      // .then(res => this.setState({ results: res }))
+      .then(res => this.setState({ result: res.data.businesses })) 
       .catch(err => console.log(err));
   };
 
@@ -35,7 +34,7 @@ class App extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchStore(this.state.search);
+    this.searchStore(this.state.term, this.state.latitude,this.state.longitude);
   }
 
   render() {
@@ -44,7 +43,10 @@ class App extends Component {
       <Title />   
       <div className="row h-100 justify-content-center align-items-center">
         <form className="col-10">
-        <Search value={this.state.search}
+        <Search 
+                term={this.state.term}
+                latitude={this.state.latitude}
+                longitude={this.state.longitude}
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}/>
         <Result 

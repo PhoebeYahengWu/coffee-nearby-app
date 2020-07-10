@@ -13,21 +13,21 @@ function Search(props) {
      
           <input type="text" 
           onChange={props.handleInputChange}
-          value={props.value}
+          value={props.term}
           name="term"
           autoComplete = "off" className="form-control" id="searchTerm" placeholder="Term" />
        
 
         <input type="text" 
           onChange={props.handleInputChange}
-          value={props.value}
+          value={props.latitude}
           name="latitude"
           autoComplete = "off" className="form-control" id="searchTerm" placeholder="Latitude" />
        
 
         <input type="text" 
           onChange={props.handleInputChange}
-          value={props.value}
+          value={props.longitude}
           name="longitude"
           autoComplete = "off" className="form-control" id="searchTerm" placeholder="Longitude" />
         
