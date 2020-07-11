@@ -20,16 +20,10 @@ function Search(props) {
 
         <input type="text" 
           onChange={props.handleInputChange}
-          value={props.latitude}
-          name="latitude"
-          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Latitude" />
+          value={props.location}
+          name="location"
+          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Location" />
        
-
-        <input type="text" 
-          onChange={props.handleInputChange}
-          value={props.longitude}
-          name="longitude"
-          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Longitude" />
         
         </div>
         <table style={{width:"100%"}}>

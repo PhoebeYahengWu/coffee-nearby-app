@@ -9,16 +9,15 @@ class App extends Component {
   state = {
     result: [],
     term: "",
-    latitude: "",
-    longitude: ""
+    location: ""
   };
 
   componentDidMount() {
-    this.searchStore('coffee',40,-120);
+    this.searchStore('coffee','New York');
   }
 
-  searchStore = (term,latitude,longitude) => {
-    API.search(term,latitude,longitude)
+  searchStore = (term,location) => {
+    API.search(term,location)
       .then(res => this.setState({ result: res.data.businesses })) 
       .catch(err => console.log(err));
   };
@@ -34,7 +33,7 @@ class App extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchStore(this.state.term, this.state.latitude,this.state.longitude);
+    this.searchStore(this.state.term, this.state.location);
   }
 
   render() {
@@ -45,8 +44,7 @@ class App extends Component {
         <form className="col-10">
         <Search 
                 term={this.state.term}
-                latitude={this.state.latitude}
-                longitude={this.state.longitude}
+                location={this.state.location}
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}/>
         <Result 
