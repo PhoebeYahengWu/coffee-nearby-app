@@ -15,7 +15,7 @@ function Search(props) {
           onChange={props.handleInputChange}
           value={props.term}
           name="term"
-          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Find coffee, tea..." />
+          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Find coffee..." />
        
 
         <input type="text" 
@@ -29,8 +29,8 @@ function Search(props) {
         <table style={{width:"100%"}}>
           <tbody>
            <tr>
-            <button type="submit" id="run-search" onClick={props.handleFormSubmit} className="btn btn-outline-dark" style={{width:"50%"}}><i className="fas fa-search"></i> Search</button>
-            <button type="submit" id="clear-all" className="btn btn-light" style={{width:"50%"}}><i className="far fa-trash-alt"></i> Clear</button>
+            <button type="submit" id="run-search" onClick={props.handleFormSubmit} className="btn btn-outline-dark" style={{width:"50%"}}><i className="fas fa-search"></i></button>
+            <button type="submit" id="clear-all" className="btn btn-light #eeeeee grey lighten-3" style={{width:"50%"}}><i className="far fa-trash-alt"></i></button>
           </tr>
          </tbody> 
         </table>

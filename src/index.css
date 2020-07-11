@@ -1,8 +1,17 @@
 .jumbotron {
   padding-top: 5px !important;
   padding-bottom: 10px !important;
-  background-color: #26a69a;
+  background-color: #d5b9b2;
   color: #ffffff;
+}
+
+#run-search {
+  background-color: #d5b9b2;
+  color: #ffffff; 
+}
+
+.card-action {
+  color: #d5b9b2 !important;
 }
 
 input:focus, button:focus {
@@ -32,9 +41,13 @@ p {
   transform: scale(1.5); 
 }
 
-.card {
-  width:90% !important;
- }
+i {
+  color: #000000;
+}
+
+.fa-search {
+  color: #ffffff;
+}
 
 .ContainerStyle {
   display: grid;
