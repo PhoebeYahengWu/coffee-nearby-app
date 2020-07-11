@@ -18,7 +18,7 @@ function Result(props) {
               <h5>{item.name}</h5>
               <p>Phone: {item.display_phone}</p>
               <p>Location: {item.location.address1}, {item.location.city}, {item.location.state} {item.location.zip_code}</p>
-              <p>Link: <a href={item.url}>View More on Yelp</a></p>
+              <p>Rating: {item.rating} <a href={item.url}>View More on Yelp</a></p>
               </li>  
             )
             
