@@ -1,5 +1,10 @@
 import React from 'react'
 
+const gridContainerStyle = {
+  display: "grid",
+  gridTemplateColumns: "auto auto",
+  gridColumnGap: "3rem !important"
+}
 
 function Result(props) {
     return (     
@@ -11,18 +16,29 @@ function Result(props) {
 
         <div id="article-section" className="card-body">
 
+        <div style={gridContainerStyle}>
         {props.result ? props.result.map((item) => { 
 
           return(
-              <li className='list-group-item' key={item.id}>
-              <h5>{item.name}</h5>
-              <p>Phone: {item.display_phone}</p>
-              <p>Location: {item.location.address1}, {item.location.city}, {item.location.state} {item.location.zip_code}</p>
-              <p>Rating: {item.rating} <a href={item.url}>View More on Yelp</a></p>
-              </li>  
-            )
-            
+                <div className="card" key={item.id}>
+                  <div className="card-image">
+                      <img src={item.image_url} alt={item.name}/>
+                  </div>
+
+                  <div className="card-content">
+                      <p style={{fontSize:"1.4rem"}}><strong>{item.name}</strong></p>
+                      <p>Phone: {item.display_phone}</p>
+                      <p>Location: {item.location.address1}, {item.location.city}, {item.location.state} {item.location.zip_code}</p>
+                  </div>
+
+                  <div className="card-action">
+                      <a href={item.url} target="_blank" rel="noopener noreferrer">View More on Yelp</a>
+                  </div>
+                  </div>
+            )    
           }): <p>No stores available!</p>}
+
+          </div>
         </div>
         </div>
 
