@@ -6,7 +6,8 @@ export default {
             'url': `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`,
             'headers': {
                 'Content-Type': 'application/json',
-                 'Authorization': `Bearer ${process.env.REACT_APP_YELP_API_KEY}`
+                 'Authorization': `Bearer ${process.env.REACT_APP_YELP_API_KEY}`,
+                 "X-Requested-With": "XMLHttpRequest"
             }
         })
 }
