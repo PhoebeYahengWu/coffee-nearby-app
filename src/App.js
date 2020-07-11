@@ -13,7 +13,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.searchStore('coffee','New York');
+    this.searchStore('coffee','Manhattan');
   }
 
   searchStore = (term,location) => {
