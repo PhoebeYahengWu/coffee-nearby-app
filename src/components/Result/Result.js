@@ -1,10 +1,6 @@
 import React from 'react'
 
-const gridContainerStyle = {
-  display: "grid",
-  gridTemplateColumns: "auto auto",
-  gridColumnGap: "3rem !important"
-}
+
 
 function Result(props) {
     return (     
@@ -16,7 +12,7 @@ function Result(props) {
 
         <div id="article-section" className="card-body">
 
-        <div style={gridContainerStyle}>
+        <div className="ContainerStyle">
         {props.result ? props.result.map((item) => { 
 
           return(
@@ -27,21 +23,22 @@ function Result(props) {
 
                   <div className="card-content">
                       <p style={{fontSize:"1.4rem"}}><strong>{item.name}</strong></p>
+                      <p>Rating: {item.rating}</p>
                       <p>Phone: {item.display_phone}</p>
                       <p>Location: {item.location.address1}, {item.location.city}, {item.location.state} {item.location.zip_code}</p>
                   </div>
 
                   <div className="card-action">
-                      <a href={item.url} target="_blank" rel="noopener noreferrer">View More on Yelp</a>
+                      <a href={item.url}  target="_blank" rel="noopener noreferrer">View More on Yelp</a>
                   </div>
-                  </div>
+                </div>
             )    
           }): <p>No stores available!</p>}
 
           </div>
         </div>
         </div>
-
+   
      
     )
 }
