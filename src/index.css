@@ -32,6 +32,9 @@ p {
   transform: scale(1.5); 
 }
 
+.card {
+  width:90% !important;
+ }
 
 .ContainerStyle {
   display: grid;

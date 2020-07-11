@@ -41,7 +41,7 @@ class App extends Component {
       <div className="container h-100">
       <Title />   
       <div className="row h-100 justify-content-center align-items-center">
-        <form className="col-10">
+        <form className="col-12">
         <Search 
                 term={this.state.term}
                 location={this.state.location}
