@@ -1,13 +1,12 @@
 import axios from 'axios';
 export default {
-    search: (term, location) =>
+    search: (term,location) =>
         axios({
             'method': 'GET',
-            'url': `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`,
+             'url': `https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=${term}&location=${location}`,
             'headers': {
                 'Content-Type': 'application/json',
-                "X-Requested-With": "XMLHttpRequest",
-                'Authorization': `Bearer ${process.env.REACT_APP_YELP_API_KEY}`
+                 'Authorization': `Bearer ${process.env.REACT_APP_YELP_API_KEY}`
             }
         })
 }
