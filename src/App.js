@@ -9,20 +9,16 @@ class App extends Component {
   state = {
     result: [],
     term: "",
-    location: ""
+    location:""
   };
-
   componentDidMount() {
-    this.searchStore('coffee','Manhattan');
+    this.searchStore('coffee',"New York");
   }
-
   searchStore = (term,location) => {
     API.search(term,location)
-      .then(res => this.setState({ result: res.data.businesses })) 
+      .then(res => this.setState({ result: res.data.businesses }))
       .catch(err => console.log(err));
   };
-
-  
   handleInputChange = event => {
     const value = event.target.value;
     const name = event.target.name;
@@ -30,24 +26,22 @@ class App extends Component {
       [name]: value
     });
   };
-
   handleFormSubmit = event => {
     event.preventDefault();
-    this.searchStore(this.state.term, this.state.location);
+    this.searchStore(this.state.term,this.state.location);
   }
-
   render() {
     return (
       <div className="container h-100">
       <Title />   
       <div className="row h-100 justify-content-center align-items-center">
         <form className="col-12">
-        <Search 
+        <Search
                 term={this.state.term}
                 location={this.state.location}
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}/>
-        <Result 
+        <Result
           result = {this.state.result}
         />
         </form>
@@ -56,5 +50,4 @@ class App extends Component {
     )
   }
 }
-
 export default App;
