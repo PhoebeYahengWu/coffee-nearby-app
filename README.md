@@ -20,7 +20,7 @@ Search Yelp is an application created using React in which users enter a desired
 API, React, JavaScript
 
 ## Link
-https://react-coffee-nearby.herokuapp.com/
+https://joli-moliere-06904.herokuapp.com/
 
 ## Usage
 Enter keyword, location and then click the search icon
